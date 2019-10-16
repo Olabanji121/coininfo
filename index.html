@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<!-- <meta
+			http-equiv="Content-Security-Policy"
+			content="upgrade-insecure-requests"
+		/> -->
+		<link
+			href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/cerulean/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-C++cugH8+Uf86JbNOnQoBweHHAe/wVKN/mb0lTybu/NZ9sEYbd+BbbYtNpWYAsNP"
+			crossorigin="anonymous"
+		/>
+		<style>
+			body {
+				background: #00c6ff; /* fallback for old browsers */
+				background: -webkit-linear-gradient(
+					to right,
+					#0072ff,
+					#00c6ff
+				); /* Chrome 10-25, Safari 5.1-6 */
+				background: linear-gradient(
+					to right,
+					#0072ff,
+					#00c6ff
+				); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+			}
+
+			.align {
+				text-align: center;
+			}
+
+			.card2 {
+				background: #82e07f9c;
+			}
+			.result {
+				color: azure;
+			}
+
+			.loading {
+				/* text-align: center; */
+				width: 100%;
+			}
+			td {
+				text-align: center;
+				width: 110px;
+				height: 50px;
+			}
+
+			th {
+				text-align: center;
+				width: 110px;
+				height: 50px;
+			}
+			.table {
+				margin: 0 auto;
+			}
+			.form-control {
+				font-size: 12px;
+			}
+		</style>
+
+		<title>PEACHGif</title>
+	</head>
+	<body class="bg-gradient-dark container">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="#">CoinINfo</a>
+
+			<div class="collapse navbar-collapse" id="navbarColor03">
+				<form class="form-inline my-2 my-lg-0">
+					<input
+						class="form-control mr-sm-2 m"
+						type="text"
+						placeholder="Enter CoinName or Symbol"
+					/>
+				</form>
+			</div>
+		</nav>
+		<button
+			type="button"
+			class="btn btn-primary btn-lg btn-block mt-3"
+			id="update"
+		>
+			UPDATE
+		</button>
+		<div class="container">
+			<div class="container table-responsive-sm ">
+				<table align="center" class="table table-hover mt-3" id="search-table">
+					<thead>
+						<tr>
+							<th scope="col">Rank</th>
+							<th scope="col">Name</th>
+							<th scope="col">Price(USD</th>
+							<th scope="col">Circulating Supply</th>
+							<th scope="col">Total Supply</th>
+							<th scope="col">Symbol</th>
+							<th scope="col">24Hr Volume</th>
+						</tr>
+					</thead>
+					<tbody class="result"></tbody>
+					<tbody class="result"></tbody>
+					<tbody class="result"></tbody>
+					<tbody class="result"></tbody>
+					<tbody class="result"></tbody>
+					<tbody class="result"></tbody>
+					<tbody class="result"></tbody>
+					<tbody class="result"></tbody>
+					<tbody class="result"></tbody>
+					<tbody class="result"></tbody>
+					<tbody class="result"></tbody>
+					<tbody class="result"></tbody>
+					<tbody class="result"></tbody>
+					<tbody class="result"></tbody>
+					<tbody class="result"></tbody>
+					<tbody class="result"></tbody>
+					<tbody class="result"></tbody>
+					<tbody class="result"></tbody>
+					<tbody class="result"></tbody>
+					<tbody class="result"></tbody>
+					<tbody class="result"></tbody>
+					<tbody class="result"></tbody>
+					<tbody class="result"></tbody>
+					<tbody class="result"></tbody>
+					<tbody class="result"></tbody>
+					<tbody class="result"></tbody>
+					<tbody class="result"></tbody>
+					<tbody class="result"></tbody>
+					<tbody class="result"></tbody>
+					<tbody class="result"></tbody>
+				</table>
+			</div>
+
+			<div align="center" class="container table-responsive-sm">
+				<table class="table table-hover mt-3 " id="onLoadTable">
+					<thead>
+						<tr>
+							<th scope="col">Rank</th>
+							<th scope="col">Name</th>
+							<th scope="col">Price(USD</th>
+							<th scope="col">Circulating Supply</th>
+							<th scope="col">Total Supply</th>
+							<th scope="col">Symbol</th>
+							<th scope="col">24Hr Volume</th>
+						</tr>
+					</thead>
+					<tbody class="profile"></tbody>
+					<tbody class="profile"></tbody>
+					<tbody class="profile"></tbody>
+					<tbody class="profile"></tbody>
+					<tbody class="profile"></tbody>
+					<tbody class="profile"></tbody>
+					<tbody class="profile"></tbody>
+					<tbody class="profile"></tbody>
+					<tbody class="profile"></tbody>
+					<tbody class="profile"></tbody>
+				</table>
+			</div>
+		</div>
+		<footer class="mt-5 p-3 text-center bg-light">
+			&copy; ASODev 2019.
+		</footer>
+
+		<script
+			src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+			integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+			integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+			integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+			crossorigin="anonymous"
+		></script>
+
+		<script src="./coininfo.js"></script>
+		<script src="./UI.js"></script>
+		<script src="./app.js"></script>
+	</body>
+</html>
