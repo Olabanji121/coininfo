@@ -8,12 +8,15 @@ const keyup = document.querySelector(".form-control");
 const update = document.getElementById("update");
 const onLoadTable = document.getElementById("onLoadTable");
 const searchTable = document.getElementById("search-table");
+const loading = document.getElementById("loading");
+loading.style.display = "none";
 
 function init() {
 	document.addEventListener("DOMContentLoaded", onDomLoad);
 }
 
 update.addEventListener("click", () => {
+    loading.style.display = "block";
 	location.reload();
 });
 
@@ -21,6 +24,8 @@ keyup.addEventListener("keyup", e => {
 	e.preventDefault();
 	dataFromAPI();
 });
+
+
 
 const dataFromAPI = () => {
 	let userText = keyup.value.trim();
@@ -65,6 +70,7 @@ const dataFromAPI = () => {
 };
 
 function onDomLoad() {
+    
 	coinInfo
 		.getData()
 		.then(result => {
